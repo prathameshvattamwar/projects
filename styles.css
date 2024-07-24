@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #121212; 
+    color: #ffffff;
+}
+
+.navbar {
+    margin-bottom: 20px;
+    background-color: #1f1f1f; 
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(147, 0, 180, 0.1);
+    background-color: #2a2a2a;
+    border: none;
+    transition: transform 0.3s ease; 
+    margin: 10px;
+    flex: 0 1 calc(33.333% - 20px); 
+    display: flex;
+    flex-direction: column;
+    height: 200px; 
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) !important; 
+    box-shadow: 10px 10px 10px rgba(164, 6, 200, .3);
+    background-color: #000000;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #cccccc; 
+}
+
+.btn-primary {
+    background-color: #565656;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #434343;
+    transform: scale(1.05); 
+}
+
+.btn-primary.focus, .btn-primary:focus{
+    border: none !important;
+    background-color: #797979 !important;
+    box-shadow: none !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #808080;
+    border: none !important;
+}
+
+.container h2 {
+    color: #ffffff; 
+    margin-bottom: 20px;
+}
+
+/* GSAP Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
